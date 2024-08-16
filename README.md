@@ -9,7 +9,7 @@
 ### Once the build completes, verify the image by executing below command
   ```docker images```
 
-### Excecute below command to create kubernetes deployment for a data-service
+### Execute below command to create kubernetes deployment for a data-service
   ```kubectl apply -f deployment.yaml```
 
 ### Execute below command to verify kubernetes deployment for a data-service
@@ -18,19 +18,19 @@
 ### Execute below command to verify kubernetes pod for a data-service
   ```kubectl get pods```
 
-### Excecute below command to see logs of a pod
+### Execute below command to see logs of a pod
   ```kubectl logs <pod-name>```
 
-### Excecute below command to create kubernetes service for a data-service
+### Execute below command to create kubernetes service for a data-service
   ```kubectl apply -f service.yaml```
 
-### Excecute below command to verify kubernetes service for a data-service
+### Execute below command to verify kubernetes service for a data-service
   ```kubectl get services```
 
 ### Open browser and hit below url, to verify if a data-service is accessible by replacing the exposed port and relevant path
   ```http://localhost:8081/alphadataservice/hello```
 
-### Excecute below command to delete kubernetes service for a data-service
+### Execute below command to delete kubernetes service for a data-service
   ```kubectl delete service <data-service-name>```
 
 ### Execute below command to delete kubernetes deployment for a data-service
