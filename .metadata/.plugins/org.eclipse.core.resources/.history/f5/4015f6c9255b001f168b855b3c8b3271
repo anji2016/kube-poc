@@ -1,0 +1,6 @@
+package com.example.gamma.client;
+@FeignClient(name="alpha-data-service")
+public interface AlphaClient {
+	@GetMapping("/alpha/hello")
+    String hello();
+}

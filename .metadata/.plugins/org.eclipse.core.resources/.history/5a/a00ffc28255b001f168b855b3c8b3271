@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment # Kubernetes resource kind we are creating
+metadata:
+  name: beta-data-service
+spec:
+  selector:
+    matchLabels:
+      app: beta-data-service
+  replicas: 2 # Number of replicas that will be created for this deployment
+  template:
+    metadata:
+      labels:
+        app: beta-data-service
+    spec:
+      containers:
+        - name: beta-data-service
+          image: beta-data-service:latest 
+# Image that will be used to containers in the cluster
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8081 
+# The port that the container is running on in the cluster

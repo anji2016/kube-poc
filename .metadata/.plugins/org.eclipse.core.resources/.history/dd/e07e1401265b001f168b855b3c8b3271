@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment # Kubernetes resource kind we are creating
+metadata:
+  name: alpha-data-service
+spec:
+  selector:
+    matchLabels:
+      app: alpha-data-service
+  replicas: 2 # Number of replicas that will be created for this deployment
+  template:
+    metadata:
+      labels:
+        app: alpha-data-service
+    spec:
+      containers:
+        - name: alpha-data-service
+          image: alpha-data-service:latest 
+# Image that will be used to containers in the cluster
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8081 
+# The port that the container is running on in the cluster

@@ -1,0 +1,6 @@
+package com.example.gamma.client;
+@FeignClient(name="beta-data-service")
+public interface BetaClient {
+	@GetMapping("/beta/hello")
+    String hello();
+}
