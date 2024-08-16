@@ -4,7 +4,7 @@ Spring Cloud Kubernetes requires access to the Kubernetes API in order to be abl
   https://stackoverflow.com/questions/56919985/service-discover-using-spring-cloud-kubernetes?rq=3
 
 execute below command in data-service folder
-  docker build -t <data-service-name> .
+         docker build -t <data-service-name> .
 
 Once the build completes, verify the image by executing below command
   docker images
