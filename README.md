@@ -1,5 +1,7 @@
 ### Spring Cloud Kubernetes requires access to the Kubernetes API in order to be able to retrieve a list of addresses for pods running for a single service. If you use Kubernetes, you should just execute the following command:
 
+This command grants the default service account in the default namespace full administrative access to the entire Kubernetes cluster. This means that any Pod or other resource using this service account will have the highest level of permissions, which includes the ability to view, create, modify, and delete any resource in any namespace.
+
   ```kubectl create clusterrolebinding admin --clusterrole=cluster-admin --serviceaccount=default:default```
   https://stackoverflow.com/questions/56919985/service-discover-using-spring-cloud-kubernetes?rq=3
 
